@@ -1,0 +1,51 @@
+<div class="container-fluid">
+ 
+  <div id="btnsobretodo">
+    <button [hidden]="!btnToggle" (click)="abrirmenu()">
+      ☰
+    </button>
+    <button [hidden]="btnToggle" (click)="cerrarmenu()">
+      X
+    </button>
+  </div>
+
+  <div class="container">
+    <nav id="nav">
+      <h2 id="hide">Registrar Materias</h2>
+      <div class="direccion">
+        
+        <div class="principal" id="hide">
+          <ul>
+            <li><b>Proximo examen: lun 13/2021</b></li>
+            <li><b>Condicion: Regular</b></li>
+            <li><b>Total Materias: 10 </b></li>
+            <li><b>Aprobado: 3 </b></li>
+          </ul>
+        </div>
+  
+        <div class="urls">
+          <ul>
+            <li>
+              <b>
+              <a id="hide" routerLink="/regprofesor" routerLinkActive="active">Ir a Registrar profesor</a>
+              </b>
+            </li>
+            <li>
+              <b>
+                  <a id="hide" routerLink="/regmateria" routerLinkActive="active">Ir a registrar Materia</a>
+              </b>
+            </li>
+            <li>
+              <b>
+                <a id="hide" routerLink="/adminprincipal" routerLinkActive="active">Ir al Principal</a>
+              </b>
+            </li>
+            <li><b id="hide">Salir</b></li>
+          </ul>
+        </div>
+
+      </div>
+    
+    </nav>
+  </div>
+</div>

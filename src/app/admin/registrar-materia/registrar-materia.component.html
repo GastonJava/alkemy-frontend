@@ -1,0 +1,97 @@
+<!-- <app-navbar></app-navbar> -->
+
+<div class="separacion"></div>
+
+<div class="container-fluid">
+
+  <div class="container">
+    <div class="navbar sticky-top">
+
+      <div class="titleinscripciones">
+        <h4>REGISTRAR MATERIA</h4>
+      </div>
+      
+    </div>
+
+      <div class="card">
+        <div class="cardinterior">
+          <div class="form-wrapper">
+
+            <div class="col-md-12 mx-auto"> 
+            <form [formGroup]="inputs" class="formcontainer" (ngSubmit)="addMateria()">
+              
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label for="inputFirstname">Nombre de Materia</label>
+                        <input type="text" class="form-control" id="inputFirstname" placeholder="Nombre de la materia" formControlName="Nombre">
+                        <span class="text-danger" *ngIf="!Nombre.valid && Nombre.touched">Ingresar nombre</span>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="inputLastname">Cantidad de Cupos</label>
+                        <input type="text" class="form-control" id="inputLastname" placeholder="Cantidad de Cupos" formControlName="Cuponmax_mat">
+                        <span class="text-danger" *ngIf="!Cupomax_mat.valid && Cupomax_mat.touched">Ingresar Cupos</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label for="inputIngresar FechaLine1">Fecha De Examen</label>
+                    
+                        <ng-bootstrap-datetime-angular
+                        class="bg-danger cambiar" 
+                        inputDatetimeFormat="yyyy/MM/dd hh:mm:ss"
+                        formControlName="Fecha"
+                        name="activeEndDate"
+                      ></ng-bootstrap-datetime-angular>
+              
+                       
+
+                        <!-- <input type="datetime" class="form-control" id="inputIngresar FechaLine1" placeholder="Fecha de examen" formControlName="Fecha"> -->
+                        <!-- <span *ngIf="!Fecha.valid && Fecha.touched">Ingresar Fecha</span> -->
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="inputIngresar FechaLine2">Ubicacion</label>
+                        <input type="text" class="form-control" id="inputIngresar FechaLine2" placeholder="Ubicacion" formControlName="Ubicacion">
+                        <span class="text-danger" *ngIf="!Ubicacion.valid && Ubicacion.touched">Ingresar Ubicacion</span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label for="inputCity">Buscar docente por DNI</label>
+                        <input type="text" class="form-control" id="inputCity" placeholder="Ingresar DNI" formControlName="Dni_d">
+                        <span class="text-danger" *ngIf="!Dni.valid && Dni.touched">Ingresar el DNI</span>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="inputState">Nombre</label>
+                        <input type="text" class="form-control-plaintext textbox" id="inputState"  readonly formControlName="Nombre_d" [(ngModel)]="this.docentedatos.nombre"> <!--  [(ngModel)]="docentedatos.Nombre"  -->
+                        <!-- <span class="text-danger" *ngIf="!Nombre_d.valid && Nombre_d.touched">Ingresar Nombre</span> -->
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="inputPostalCode">Apellido</label>
+                        <input type="text" class="form-control-plaintext textbox" id="inputPostalCode" readonly formControlName="Apellido_d" [(ngModel)]="this.docentedatos.apellido"> <!-- [(ngModel)]="this.docentedatos.apellido" -->
+                        <!-- <span class="text-danger" *ngIf="!Apellido_d.valid && Apellido_d.touched">Ingresar Apellido</span> -->
+                    </div>
+                </div>
+                <div class="form-groupbtn">
+                  <button type="button" class="btn btn-secondary px-4 float-left" (click)="obtenerdocente()" >BUSCAR DOCENTE</button> <!-- [disabled]="!Dni.valid" -->
+                  <button class="btn btn-primary px-4 float-right" [disabled]="!inputs.valid">AGREGAR MATERIA</button>
+                </div>
+                
+                
+            </form>
+
+            <div class="card-span" *ngIf="!iscreated">
+              <span class="error" >Inscripcion exitosa sigue tu estado en CONSULTAS</span>
+             
+            </div>
+           </div>
+
+   
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div>
+<div class="container-footer">
+  <app-adminfooter></app-adminfooter>
+</div>

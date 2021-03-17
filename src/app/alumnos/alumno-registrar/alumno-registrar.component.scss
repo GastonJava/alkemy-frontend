@@ -1,0 +1,933 @@
+@import "src/app/shared/paletaprincipal";
+
+//TOOLTIP CONFIG
+.tooltipr{
+  height: 80px;
+  color: $texto-azul4;
+  font-size: 1.0vw;
+}
+
+.container-fluid {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+
+  overflow-y: scroll;
+  /* background-color: $c_tercero_d; */
+  width: 60%;
+  height: 94vh;
+
+  border-radius: 5px;
+  background: #23252f;
+  box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+}
+
+/* .buscarmateria {
+  background: red;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 280px;
+  i {
+    font-size: 28px;
+  }
+} */
+
+.formtitulo {
+  position: absolute;
+  background-color: #272935;
+  height: 20%;
+  left: 15px;
+  top: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  //titulo
+  span {
+    text-align: center;
+    font-size: 1.3vw;
+    color: $texto-azul1;
+  }
+}
+
+form {
+  /* CAMBIAR ESTO QUE ES LO QUE MODIFIQUE AL ULTIMO */
+  position: relative;
+  z-index: 50;
+  width: 18vw;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* .iconosearch{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 50%;
+
+    i{
+      font-size: 2.4vw;
+      color: $c_segundo_d;
+    }
+  } */
+}
+
+//reg navbar
+.regnavbar {
+  border-bottom: 2px solid $c_tercero_d;
+  input {
+    width: 14vw;
+    height: 3.5vh; /*  MODIFICADO AL ULTIMO ----------------------------*/
+    padding: 2px;
+    font-size: 1vw;
+    border-width: 1px;
+    border-color: #cccccc;
+    background: transparent;
+    color: white;
+    border-style: ridge;
+    border-radius: 5px;
+    box-shadow: -5px -1px 5px rgba(66, 66, 66, 0.7);
+    text-shadow: 0px 0px 5px rgba(66, 66, 66, 0.72);
+    text-align: center;
+  }
+  input:focus {
+    background: rgba(66, 63, 78, 0.595);
+    border-radius: 5px;
+    color: white;
+    font-size: 0.8vw;
+  }
+}
+
+.mensaje {
+  transition-delay: 7s;
+}
+
+.card {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 280px;
+  background: $c_cuarto_d;
+  box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+  /* ::-webkit-scrollbar {
+    scrollbar-color: yellow;
+  } */
+}
+
+.card:hover {
+  transition: all 0.7s ease-out;
+  border-radius: 13px;
+  background: #1a1c24;
+  box-shadow: -12px -12px 24px #171920, 12px 12px 24px #1d1f28;
+  border: 1px solid white;
+  .cardinterior {
+    .left {
+      .iconofecha {
+        .profesortitle {
+          h4,
+          h3 {
+            color: $texto-azul1;
+          }
+        }
+      }
+      .virtual {
+        .profesortitle {
+          h4,
+          h3 {
+            color: $texto-azul1;
+          }
+        }
+      }
+    }
+    .txtcontainer {
+      h3 {
+        color: $texto-azul1;
+      }
+    }
+  }
+}
+
+// titulo de que materia es ej: ingles, matematicas, etc
+.txtcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  h3 {
+    font-size: 1.5vw;
+    color: $texto-azul4;
+  }
+}
+
+// card spacer
+.cardspacer {
+  padding: 15px;
+}
+
+.cardinterior {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+
+  .left {
+    .iconofecha,
+    .virtual {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 100px;
+    }
+  }
+
+  .right {
+    .iconofecha,
+    .ciudad {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 260px;
+      height: 100px;
+    }
+  }
+
+  .profesortitle {
+    width: 200px;
+    text-align: center;
+    h4 {
+      font-size: 18px;
+      color: $texto-azul4;
+    }
+  }
+
+  .icono {
+    background: $c_quinto_d;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  i {
+    font-size: 25px;
+    color: $c_segundo_d;
+  }
+
+  .left,
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+p {
+  color: $texto-azul2;
+}
+
+/* FOOTER FOOTERR FOOOTEEERR */
+.container-footer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 10px;
+  top: 150px;
+
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 80%;
+  width: 15%;
+  background-color: $c_cuarto_d;
+}
+
+// MENSAJE DE NOT FOUND AL NO ENCONTRAR RESULTADOS
+.notfound {
+  font-size: 100px;
+  background: red;
+}
+
+.image-container {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+
+  .picnotfound {
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// SWEET ALERT 
+.swal2-styled.swal2-title.titlecolor{
+  /* color: #75BAFF; */
+/*   color: red; */
+}
+
+
+
+// VOLVER LA PAGINA ADAPTABLE A TODOS DISPOSITIVOS ----------------------- ----------
+@media screen and (min-width: 300px) {
+  /* ---------------------------------------- */
+  .container-fluid {
+    width: 100%;
+
+  }
+
+  .formtitulo {
+      // cambiamos esto ------------- /
+    left: 0;
+    width: 25%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    span {
+      display: none;
+
+      /*  font-size: 1.7vw; */
+    }
+    form {
+      height: 90%;
+    }
+  }
+
+  //input de el formulario
+  .regnavbar {
+    padding: 0;  /* cambiamos padding -------------- */
+    input {
+     
+      width: 100%;
+      height: 50%;
+      font-size: 1.5vw;
+    }
+
+    input:focus {
+      background: rgba(66, 63, 78, 0.595);
+      border-radius: 5px;
+      color: white;
+      font-size: 1.4vw;
+    }
+  }
+
+  //CARDS
+  .cardspacer {
+    padding-left: 0;
+    padding-right: 0;
+    /* height: 280px; */
+    .card {
+      height: 100%;
+      width: 100%;
+      /* height: 80%;   */
+      display: flex;
+      flex-direction: column;
+      .cardinterior {
+        /*  height: 50%; */
+        .left {
+          height: 90%;
+          .iconofecha {
+            height: 100%;
+          }
+          .profesortitle {
+            h4, p{
+              font-size: 2.8vw;
+            }
+          }
+          .icono {
+            display: none; // sin iconos
+            width: 20px;
+            height: 20px;
+          }
+
+          .ubicaciontxt{
+            h4{
+              font-size: 2.9vw;
+            }
+          }
+        }
+      }
+
+      h3 {
+        font-size: 3.6vw;
+      }
+    }
+  }
+
+  .card:hover {
+    .cardinterior {
+      border-radius: 13px;
+    }
+  }
+  .image-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 240px;
+    img {
+      height: 60%;
+      width: 80%;
+    }
+  }
+
+  //vamos a quitar el background del footer
+  .container-footer {
+    top: 10px;
+    background-color: transparent;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  //For Tablets
+  .container-fluid {
+    width: 450px;
+
+  }
+
+  .formtitulo {
+    left: 0;
+    width: 26vw;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    span {
+      display: none;
+
+      /*  font-size: 1.7vw; */
+    }
+    form {
+      height: 90%;
+    }
+  }
+
+  //input de el formulario
+  .regnavbar {
+    input {
+      font-size: 1.5vw;
+    }
+
+    input:focus {
+      background: rgba(66, 63, 78, 0.595);
+      border-radius: 5px;
+      color: white;
+      font-size: 1.4vw;
+    }
+  }
+
+  //CARDS
+  .cardspacer {
+    .card {
+      display: flex;
+      flex-direction: column;
+      .cardinterior {
+
+        .left {
+          .iconofecha {
+          }
+          .profesortitle {
+            h4, p {
+              font-size: 2.8vw;
+            }
+          }
+          .icono {
+            display: none;
+            width: 20px;
+            height: 20px;
+          }
+
+          .virtual{
+            .ubicaciontxt{
+              h4{
+
+              }
+            }
+          }
+        }
+      }
+
+      h3 {
+        font-size: 2.8vw;
+      }
+    }
+  }
+
+  .card:hover {
+    .cardinterior {
+      border-radius: 13px;
+    }
+  }
+  .image-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 220px;
+    img {
+      height: 70%;
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  //For Tablets
+  .container-fluid {
+    width: 570px;
+
+  }
+
+  .formtitulo {
+    left: 0;
+    width: 26vw;
+    /* max-width: 130px; */
+    height: 109px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    span {
+      display: flex;
+      font-size: 1.7vw;
+    }
+    form {
+      height: 100%;
+    }
+  }
+
+  //input de el formulario
+  .regnavbar {
+    input {
+      font-size: 1.5vw;
+    }
+
+    input:focus {
+      background: rgba(66, 63, 78, 0.595);
+      border-radius: 5px;
+      color: white;
+      font-size: 1.4vw;
+    }
+  }
+
+  //CARDS
+  .cardspacer {
+    .card {
+      display: flex;
+      flex-direction: column;
+      .cardinterior {
+
+        .left {
+          .icono {
+            display: flex;
+            width: 40px;
+            height: 40px;
+          }
+
+          // FECHA Y NOMBRE PROFESOR
+          .profesortitle {
+            h4,
+            p {
+              font-size: 2.2vw;
+            }
+          }
+
+          .virtual{
+            // Nombre del la ubicacion
+            .profesortitle {
+              h4{
+                font-size: 2.7vw;
+              }
+            }
+          }
+        }
+      }
+
+      h3 {
+        font-size: 2.7vw;
+      }
+    }
+  }
+
+  .card:hover {
+    .cardinterior {
+      border-radius: 13px;
+    }
+  }
+  .image-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 285px;
+    img {
+      height: 70%;
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  //For Laptops
+  .container-fluid {
+    width: 738px;
+
+  }
+
+  .formtitulo {
+    left: 0;
+    width: 23vw;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    span {
+      display: block;
+      font-size: 1.7vw;
+    }
+    form {
+      height: 130px;
+    }
+  }
+
+  //input de el formulario
+  .regnavbar {
+    input {
+      font-size: 1.5vw;
+    }
+
+    input:focus {
+      background: rgba(66, 63, 78, 0.595);
+      border-radius: 5px;
+      color: white;
+      font-size: 1.4vw;
+    }
+  }
+
+  //CARDS
+  .cardspacer {
+    .card {
+      display: flex;
+      flex-direction: column;
+      .cardinterior {
+
+        .left {
+          .icono {
+            display: flex;
+            width: 40px;
+            height: 40px;
+          }
+          
+          // FECHA Y NOMBRE PROFESOR
+          .profesortitle {
+            h4,
+            p {
+              font-size: 1.8vw;
+            }
+          }
+
+          .virtual{
+            // Nombre del la ubicacion
+            .profesortitle {
+              h4{
+                font-size: 2.0vw;
+              }
+            }
+          }
+          
+        }
+      }
+
+      h3 {
+        font-size: 2.0vw;
+      }
+    }
+  }
+
+  .card:hover {
+    .cardinterior {
+      border-radius: 13px;
+    }
+  }
+  .image-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 400px;
+    img {
+      height: 80%;
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  //For Large Laptops
+  .container-fluid {
+    width: 962px;
+
+  }
+
+  // CONTAINER DEL BUSCADOR DE MATERIAS
+  .formtitulo {
+    left: 0;
+    width: 20vw;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    span {
+      display: block;
+      font-size: 1.5vw;
+    }
+    form {
+      height: 130px;
+    }
+  }
+
+  //CARDS
+  .cardspacer {
+    .card {
+      display: flex;
+      flex-direction: row;
+      .left {
+        .icono {
+          display: flex;
+          width: 43px;
+          height: 43px;
+        }
+
+        .iconofecha{
+          .profesortitle{
+            h4,p{
+              font-size: 1.4vw;
+            }
+          }
+        }
+
+        
+          .ubicaciontxt{
+            h4{
+
+              font-size: 1.7vw;
+            }
+          }
+
+        
+
+        
+      }
+
+      h3 {
+        font-size: 1.8vw;
+      }
+    }
+  }
+
+  .card:hover {
+    .cardinterior {
+      border-radius: 13px;
+    }
+  }
+
+  .image-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 525px;
+    img {
+      height: 70%;
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  //For Big TV's (HD Screens)
+  .container-fluid {
+    width: 1250px;
+
+  }
+
+  /* .formtitulo {
+    left: 0;
+    width: 20vw;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    span {
+      display: block;
+      font-size: 1.5vw;
+    }
+    form {
+      height: 130px;
+    }
+  }
+ */
+  //CARDS
+  .cardspacer {
+    .card {
+      display: flex;
+      flex-direction: row;
+
+      .left {
+        .icono {
+          display: flex;
+
+          width: 43px;
+          height: 43px;
+        }
+
+        // FECHA Y NOMBRE PROFESOR
+        .iconofecha{
+          .profesortitle {
+
+            h4,
+            p {
+              font-size: 1.3vw;
+            }
+          }
+        }
+        
+
+        .virtual{
+          // Nombre del la ubicacion
+          .ubicaciontxt {
+            h4{
+              font-size: 1.5vw !important;
+            }
+          }
+        } 
+      }
+
+      h3 {
+        font-size: 1.8vw;
+      }
+    }
+  }
+
+  .card:hover {
+    .cardinterior {
+      border-radius: 13px;
+    }
+  } 
+
+  .image-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 380px;
+    width: 690px;
+    img {
+      height: 70%;
+      width: 80%;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1537px){
+  .container-fluid {
+    width: 1500px;
+
+  }
+
+  .cardspacer {
+    .card {
+      display: flex;
+      flex-direction: row;
+
+      .left {
+        .icono {
+          display: flex;
+
+          width: 43px;
+          height: 43px;
+        }
+
+        // FECHA Y NOMBRE PROFESOR
+        .iconofecha{
+
+          width: 400px;
+          .profesortitle {
+            width: 240px;
+
+            h4,
+            p {
+              font-size: 1.0vw;
+            }
+          }
+        }
+        
+
+        .virtual{
+          width: 400px; /* PROBAMOS EL ANCHO TOTAL DEL LOGO UBICACION Y CORDOBA VIRTUAL TXT */
+
+
+          // Nombre del la ubicacion
+          .ubicaciontxt {
+            width: 240px;
+
+            h4{
+              font-size: 1.3vw !important;
+            }
+          }
+        } 
+      }
+
+      h3 {
+        font-size: 1.8vw;
+      }
+    }
+  }
+
+  .card:hover {
+    .cardinterior {
+      border-radius: 13px;
+    }
+  } 
+
+  .image-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 380px;
+    width: 840px;
+    img {
+      height: 80% !important;
+      width: 80% !important;
+    }
+  }
+  
+  
+  
+}

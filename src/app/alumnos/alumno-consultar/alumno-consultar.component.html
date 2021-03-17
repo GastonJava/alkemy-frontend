@@ -1,0 +1,63 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+  
+  <div class="formtitulo">
+    <span>Consultar Materias Inscriptas</span>
+    <form [formGroup]="grupoFiltrar" (ngSubmit)="buscarDatos()" class="">
+     
+      <div class="navbar sticky-top regnavbar"> <!-- buscarmateria -->
+        <input type="text" placeholder="Nombre De Materia" [(ngModel)]='title' formControlName="buscar"/>
+      </div>
+    
+    </form>
+  </div>
+ 
+  
+  <div class="container">
+
+    <ng-container *ngFor="let materia of materias | filter:title index as i">
+      <div class="cardspacer"> 
+       <!-- probando cambiar diseño -->
+       <div class="card">
+        <div class="cardinterior">
+          <div class="left">
+            <div class="iconofecha">
+              <div class="icono">
+                <i class="far fa-clock"></i>
+              </div>
+  
+              <div class="profesortitle">
+                <h4>{{materia.fecha}}</h4>
+                <p>Prof: {{materia.nombre_d}} {{materia.apellido_d}}</p>
+              </div>
+            </div>
+  
+            <div class="virtual">
+              <div class="icono">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="ubicaciontxt profesortitle">
+                <h4>{{materia.ubicacion}}</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="txtcontainer">
+          <h3 class="titulo">{{materia.nombre}}</h3>
+          <div class="icono">
+              <i class="far fa-trash-alt" (click)="eliminar(materia.id, materia.nombre)"></i>
+
+          </div>
+        </div>
+
+       </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<!-- footer -->
+<div class="container-footer">
+  <app-footer></app-footer>
+</div>

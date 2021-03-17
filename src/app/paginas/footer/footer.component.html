@@ -1,0 +1,91 @@
+<div class="trigger menu">
+  <div class="btn-container">
+    <button [hidden]="btnToggle" class="btn btn-success" (click)="openNav()">
+      ☰
+    </button>
+    <button [hidden]="!btnToggle" class="btn btn-danger" (click)="closeNav()">
+      X
+    </button>
+  </div>
+</div>
+
+<nav class="footer adminfooter principalfoot" id="abrirlinks">
+  <div class="footer-link" id="footer-link1">
+    <div [hidden]="!start">
+      <div class="container">
+        <h2 class="starttitle">BIENVENIDO: Gaston</h2>
+        <br />
+        <p class="starttxt">Condicion: Regular</p>
+        <p class="starttxt">Total Materias: 10</p>
+        <p class="starttxt">Aprobadas: 3</p>
+        <p class="starttxt">Proximo examen<br />03/05/2021</p>
+      </div>
+    </div>
+
+    <div [hidden]="!btnToggle" *ngIf="isAlumnopage()">
+      <div class="navbar">
+        <h4 id="title">Registrar Alumno</h4>
+      </div>
+
+      <li id="txt">
+        <a routerLink="/consultaralumno" routerLinkActive="active"
+          >Consultar materia
+        </a>
+      </li>
+
+      <li id="txt">
+        <a routerLink="/registraralumno" routerLinkActive="active"
+          >Registrar materia</a
+        >
+      </li>
+
+      <li id="txt">
+        <a routerLink="/principalform" routerLinkActive="active"
+          >Formulario login</a
+        >
+      </li>
+
+      <li id="txt" (click)="logout()"><a>SALIR</a></li>
+    </div>
+
+    <!-- <div class="admincontainer" [hidden]="btnToggle" *ngIf="isAdminpage()">
+      <div class="navbar adminnavabar">
+        <h4 id="title admintitle">Registrar Alumno</h4>
+      </div>
+
+      <li id="admintxt">
+        <a class="admin" routerLink="/regprofesor" routerLinkActive="active"
+          >Registrar profesor admin</a
+        >
+      </li>
+      <li id="admintxt">
+        <a class="admin" routerLink="/regmateria" routerLinkActive="active"
+          >Registrar materia admin</a
+        >
+      </li>
+
+      <li id="admintxt">
+        <a class="admin" routerLink="/adminprincipal" routerLinkActive="active"
+          >Admin principal</a
+        >
+      </li>
+
+      <li id="adminsalir" (click)="logout()"><a>SALIR</a></li>
+    </div> -->
+
+    <li [hidden]="!btnToggle" (click)="testingAuthorize()">
+      <a class="bg-danger">TRAER DATOS CON AUTHORIZE</a>
+    </li>
+
+    <li (click)="obtenerinfoSoloAlumnos()">
+      <a class="bg-danger">Traer informacion solo alumno</a>
+    </li>
+
+    <li>
+      <a class="text-white">{{ token }}</a>
+    </li>
+
+     <pre class="text-success">{{ informacion | json}}</pre>
+     <pre class="bg-danger">{{ error | json }}</pre>
+  </div>
+</nav>

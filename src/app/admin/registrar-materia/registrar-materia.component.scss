@@ -1,0 +1,910 @@
+@import "src/app/shared/paletaprincipal";
+
+* {
+  /*   padding: 0;
+  margin: 0; */
+  box-sizing: border-box;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  /* background: #23252f; */
+  box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  border-bottom: 1px solid $texto-azul2;
+  border-left: 2px solid $c_tercero_d;
+  border-right: 2px solid $c_tercero_d;
+}
+
+.titleinscripciones {
+  h4 {
+    color: $texto-azul2;
+    font-size: 3vw;
+    text-shadow: -3px 0px 2px #234a70;
+    font-weight: lighter;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  width: 80%;
+  background: $c_cuarto_d;
+  box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+  border: 3px solid $c_tercero_d;
+}
+
+.cardinterior {
+/*   background-color: green; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 80%; /* --------------------------- marca la diferencia */
+  width: 70%; /* --------------------------- marca la diferencia */
+}
+
+// formulario
+.form-wrapper {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $c_cuarto_d;
+  box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+  border: 3px solid $c_tercero_d;
+}
+
+.form-groupbtn {
+  height: 100px;
+ /*  background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+input {
+  background: $c_segundo_d;
+  color: white;
+}
+
+input:focus {
+  background: $c_quinto_d;
+  border: 1px solid transparent;
+  color: white;
+}
+
+// input textbox read only
+input[readonly] {
+  background: #98a6ad;
+  border: 0;
+  font-size: 1em;
+}
+
+::placeholder {
+  color: black;
+}
+
+::placeholder:focus {
+  color: white;
+}
+
+.input-group-text {
+  background: $c_quinto_d;
+  i {
+    color: $texto-azul2;
+  }
+}
+
+.btn {
+  display: block;
+  height: 40px;
+  width: 100%;
+  background: $texto-azul2;
+  color: black;
+}
+
+label {
+  color: $texto-azul1;
+}
+
+/* .textbox:focus{
+    background: white;
+} */
+
+/* FOOTER FOOTERR FOOOTEEERR */
+.container-footer {
+  position: absolute;
+  right: 10px;
+  top: 120px;
+
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  /* height: 60%; */
+  height: 400px;
+  width: 15%;
+  background-color: $c_cuarto_d;
+}
+
+.separacion {
+  height: 70px;
+}
+
+/* Responsive registrar materia */
+
+/* super desktop large*/
+@media screen and (max-width: 1600px) {
+  .container-fluid {
+    height: 100vh;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: 95%;
+    border-radius: 5px;
+    background: #23252f;
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+  .titleinscripciones {
+    h4 {
+      color: $texto-azul2;
+      font-size: 3vw;
+      text-shadow: -3px 0px 2px #234a70;
+      font-weight: lighter;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+   /*  background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 80%;
+    /* background: $c_cuarto_d; */
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    border: 3px solid $c_tercero_d;
+  }
+
+  .cardinterior {
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 90%; /* --------------------------- marca la diferencia */
+    width: 70%; /* --------------------------- marca la diferencia */
+  }
+
+  // formulario
+  .form-wrapper {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $c_cuarto_d;
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    border: 3px solid $c_tercero_d;
+  }
+
+  .form-groupbtn {
+    height: 100px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  label {
+    color: $texto-azul1;
+  }
+
+  input::placeholder {
+    color: white;
+    font-size: 10px;
+  }
+
+  input {
+    /* background: $c_segundo_d; */
+    background: rgba(255, 255, 255, 0.06);
+    color: white;
+  }
+
+  input:focus {
+    background: $c_quinto_d;
+    border: 1px solid transparent;
+    color: white;
+  }
+
+  // input textbox read only
+  input[readonly] {
+    /* background: #98A6AD; */
+    background: rgba(255, 255, 255, 0.06);
+    border: 0;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .separacion {
+    height: 0px;
+  }
+}
+
+/* desktop styles*/
+@media screen and (max-width: 1200px) {
+  .container-fluid {
+    height: 100vh;
+    background-color: violet;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: 95%;
+    border-radius: 5px;
+    background: #23252f;
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+  .titleinscripciones {
+    h4 {
+      color: $texto-azul2;
+      font-size: 3vw;
+      text-shadow: -3px 0px 2px #234a70;
+      font-weight: lighter;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 80%;
+    /* background: $c_cuarto_d; */
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    border: 3px solid $c_tercero_d;
+  }
+
+  .cardinterior {
+    background-color: green;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 80%; /* --------------------------- marca la diferencia */
+    width: 80%; /* --------------------------- marca la diferencia */
+  }
+
+  // formulario
+  .form-wrapper {
+    width: 95%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $c_cuarto_d;
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    border: 3px solid $c_tercero_d;
+  }
+
+  .form-groupbtn {
+    height: 100px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  label {
+    color: $texto-azul1;
+    font-size: 1.2vw;
+  }
+
+  input::placeholder {
+    color: white;
+    font-size: 10px;
+  }
+
+  input {
+    /* background: $c_segundo_d; */
+    background: rgba(255, 255, 255, 0.06);
+    color: white;
+  }
+
+  input:focus {
+    background: $c_quinto_d;
+    border: 1px solid transparent;
+    color: white;
+  }
+
+  // input textbox read only
+  input[readonly] {
+    /* background: #98A6AD; */
+    background: rgba(255, 255, 255, 0.06);
+    border: 0;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .separacion {
+    height: 0px;
+  }
+}
+
+/* large tablets & laptop styles */
+@media screen and (max-width: 960px) {
+  .container-fluid {
+    background-color: green;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: red;
+    /* background: #23252f; */
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+  .titleinscripciones {
+    h4 {
+      color: $texto-azul2;
+      font-size: 3vw;
+      text-shadow: -3px 0px 2px #234a70;
+      font-weight: lighter;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    width: 95%;
+    /* background: $c_cuarto_d; */
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    border: 3px solid $c_tercero_d;
+  }
+
+  .cardinterior {
+    background-color: green;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 98%; /* --------------------------- marca la diferencia */
+    width: 95%; /* --------------------------- marca la diferencia */
+  }
+
+  // formulario
+  .form-wrapper {
+    width: 95%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $c_cuarto_d;
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    border: 3px solid $c_tercero_d;
+  }
+
+  .form-groupbtn {
+    /* height: 100px; */
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+  }
+
+  label {
+    color: $texto-azul1;
+    font-size: 1.3vw;
+  }
+
+  input::placeholder {
+    color: white;
+    font-size: 10px;
+  }
+
+  input {
+    /* background: $c_segundo_d; */
+    background: rgba(255, 255, 255, 0.06);
+    color: white;
+  }
+
+  input:focus {
+    background: $c_quinto_d;
+    border: 1px solid transparent;
+    color: white;
+  }
+
+  // input textbox read only
+  input[readonly] {
+    /* background: #98A6AD; */
+    background: rgba(255, 255, 255, 0.06);
+    border: 0;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .separacion {
+    height: 0px;
+  }
+
+  .container-footer {
+    height: 20%;
+    width: 68%;
+    margin-top: -12%;
+    margin-right: 140px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container-fluid {
+    background-color: yellow;
+  }
+
+  .container-footer {
+    margin-top: -116px;
+    margin-right: 114px;
+  }
+
+  nav {
+    background-color: red;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .container-fluid {
+    background-color: purple;
+    height: 100vh;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    border-radius: 5px;
+    background: #23252f;
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+  .titleinscripciones {
+    h4 {
+      color: $texto-azul2;
+      font-size: 3vw;
+      text-shadow: -3px 0px 2px #234a70;
+      font-weight: lighter;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    width: 95%;
+    /* background: $c_cuarto_d; */
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    border: 3px solid $c_tercero_d;
+  }
+
+  .cardinterior {
+    background-color: green;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 98%; /* --------------------------- marca la diferencia */
+    width: 95%; /* --------------------------- marca la diferencia */
+  }
+
+  // formulario
+  .form-wrapper {
+    width: 95%;
+    height: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $c_cuarto_d;
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    border: 3px solid $c_tercero_d;
+  }
+
+  .form-groupbtn {
+    /* height: 100px; */
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+  }
+
+  label {
+    color: $texto-azul1;
+    font-size: 1.7vw;
+  }
+
+  button {
+    font-size: 1.9vw;
+  }
+
+  input::placeholder {
+    color: white;
+    font-size: 10px;
+  }
+
+  input {
+    /* background: $c_segundo_d; */
+    background: rgba(255, 255, 255, 0.06);
+    color: white;
+  }
+
+  input:focus {
+    background: $c_quinto_d;
+    border: 1px solid transparent;
+    color: white;
+  }
+
+  // input textbox read only
+  input[readonly] {
+    /* background: #98A6AD; */
+    background: rgba(255, 255, 255, 0.06);
+    border: 0;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .separacion {
+    height: 0px;
+  }
+
+  .container-footer {
+    height: 20%;
+    width: 78%;
+    margin-top: -9%;
+    margin-right: 55px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .container-fluid{
+    background-color: turquoise; /*  -------------------------------- */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: violet;
+    /* background: #23252f; */
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+  .titleinscripciones {
+    h4 {
+      color: $texto-azul2;
+      font-size: 3vw;
+      text-shadow: -3px 0px 2px #234a70;
+      font-weight: lighter;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    height: 30px;
+  }
+
+  .card {
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 95%;
+    /* background: $c_cuarto_d; */
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    border: 3px solid $c_tercero_d;
+  }
+
+  .cardinterior {
+    background-color: green;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 98%; /* --------------------------- marca la diferencia */
+    width: 95%; /* --------------------------- marca la diferencia */
+  }
+
+  // formulario
+  .form-wrapper {
+    width: 90%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $c_cuarto_d;
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    border: 2px solid $c_tercero_d;
+  }
+
+  .form-groupbtn {
+    height: 65px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+  }
+
+  /* fecha de datapicker */
+  
+
+  label {
+    color: $texto-azul1;
+    font-size: 1.7vw;
+  }
+
+  button {
+    display: block;
+    font-size: 1.9vw;
+    height: 30px !important;
+    background-color: blue;
+  }
+
+  input::placeholder {
+    color: white;
+    font-size: 10px;
+  }
+
+  input {
+    /* background: $c_segundo_d; */
+    background: rgba(255, 255, 255, 0.06);
+    color: white;
+    height: 20px;
+  }
+
+  input:focus {
+    background: $c_quinto_d;
+    border: 1px solid transparent;
+    color: white;
+  }
+
+  // input textbox read only
+  input[readonly] {
+    /* background: #98A6AD; */
+    background: rgba(255, 255, 255, 0.06);
+    border: 0;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .separacion {
+    height: 0px;
+  }
+
+  .container-footer {
+    height: 13%;
+    width: 78%;
+    margin-top: -20%;
+    margin-right: 55px;
+  }
+
+
+}
+
+@media screen and (max-width: 320px) {
+  .container-fluid {
+    height: 100vh;
+    background-color: pink;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    height: 80%;
+    border-radius: 5px;
+    background: #23252f;
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+  .titleinscripciones {
+    h4 {
+      color: $texto-azul2;
+      font-size: 3vw;
+      text-shadow: -3px 0px 2px #234a70;
+      font-weight: lighter;
+    }
+  }
+    .navbar {
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: blue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      /* background: $c_cuarto_d; */
+      box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+      border: 3px solid $c_tercero_d;
+    }
+
+    .cardinterior {
+      background-color: green;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      height: 98%; /* --------------------------- marca la diferencia */
+      width: 95%; /* --------------------------- marca la diferencia */
+    }
+
+    // formulario
+    .form-wrapper {
+      width: 95%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $c_cuarto_d;
+      box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+      border: 3px solid $c_tercero_d;
+    }
+
+    .form-groupbtn {
+      height: 100px;
+      background-color: red;
+
+      display: flex;
+      flex-direction: column;
+      /* justify-content: space-evenly; */
+    }
+
+    label {
+      color: $texto-azul1;
+      font-size: 1.7vw;
+    }
+
+    button {
+      font-size: 1.9vw;
+    }
+
+    input::placeholder {
+      color: white;
+      font-size: 10px;
+    }
+
+    input {
+      /* background: $c_segundo_d; */
+      background: rgba(255, 255, 255, 0.06);
+      color: white;
+      height: 15px;
+    }
+ 
+    #fechacontainer{
+      height: 5px;
+    }
+
+    ng-bootstrap-datetime-angular{
+      background-color: red;
+      color: green;
+      height: 10px;
+    }
+
+    .ng-reflect-ng-class{
+      height: 10px;
+      background-color: red;
+    }
+    ._ngcontent-vqe-c1{
+      background-color: red;
+      height: 10px;
+    }
+
+    .cambiar{
+      background-color: red;
+      color: green;
+      height: 10px;
+    }
+
+    input:focus {
+      background: $c_quinto_d;
+      border: 1px solid transparent;
+      color: white;
+    }
+
+    // input textbox read only
+    input[readonly] {
+      /* background: #98A6AD; */
+      background: rgba(255, 255, 255, 0.06);
+      border: 0;
+      font-size: 1em;
+      text-align: center;
+    }
+
+    .separacion {
+      height: 0px;
+    }
+
+    .container-footer {
+      height: 20%;
+      width: 78%;
+      margin-top: -9%;
+      margin-right: 55px;
+    }
+ 
+}
