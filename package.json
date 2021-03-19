@@ -28,6 +28,7 @@
     "ng2-fittext": "^1.2.12",
     "ng2-search-filter": "^0.5.1",
     "ng2-tooltip-directive": "^2.9.20",
+    "node-sass": "^4.10.0",
     "rxjs": "~6.4.0",
     "sweetalert2": "^10.15.5",
     "tslib": "^1.9.0",

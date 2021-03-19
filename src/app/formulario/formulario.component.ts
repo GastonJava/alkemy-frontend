@@ -43,8 +43,8 @@ export class FormularioComponent implements OnInit {
   FormDataGroup() {
     this.inputs = new FormGroup({
       Email: new FormControl("", Validators.required),
-      Pass: new FormControl("", Validators.required),
-      Rol: new FormControl("", Validators.required),
+      Password: new FormControl("", Validators.required),
+      Rolnombre: new FormControl("", Validators.required),
     });
   }
 
@@ -53,15 +53,43 @@ export class FormularioComponent implements OnInit {
   }
 
   get Pass() {
-    return this.inputs.get("Pass");
+    return this.inputs.get("Password");
   }
 
   get rolNombre() {
-    return this.inputs.get("Rol");
+    return this.inputs.get("Rolnombre");
   }
 
-  // verificar login de admin
-  login() {
+  login(){
+    this.srv.loguearusuario(this.inputs.value).subscribe((response) => {
+      this.onSuccessMessage = true;
+      this.onErrorMessage = false;
+      
+      const token = (<any>response).token;
+      localStorage.setItem("jwt", token);
+
+      console.log(token);
+      
+      if(this.rolNombre.value == "Administrador"){
+        setTimeout(() => {
+          this.router.navigate(["/adminprincipal"]);
+        }, 5000)
+
+      }else if(this.rolNombre.value == "Alumno"){
+        setTimeout(() => {
+          this.router.navigate(["/registraralumno"]);
+        }, 5000)
+      }
+
+    }, 
+    (err) => console.log(err),
+    
+    );
+  }
+
+
+   // verificar login de admin
+/*   login() {
     if (this.rolNombre.value == "Administrador") {
       console.log(this.inputs.value);
       this.srv.logearseAdmin(this.inputs.value).subscribe(
@@ -102,13 +130,11 @@ export class FormularioComponent implements OnInit {
           localStorage.setItem("jwt", token);
           
 
-          console.log("el token: "+token); /* mostrar el token */
+          console.log("el token: "+token);
 
           setTimeout(() => {
             this.router.navigate(["/registraralumno"]);
           }, 5000)
-
-           /* consultaralumno */ 
 
         },
         (error: HttpErrorResponse) => {
@@ -126,5 +152,5 @@ export class FormularioComponent implements OnInit {
     } else {
       console.log("no se selecciono select");
     }
-  }
+  } */
 }

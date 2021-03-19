@@ -35,9 +35,7 @@ const routes: Routes = [
   {path: 'adminprincipal', component: AdminComponent, canActivate: [AuthGuardService]},
   {path: 'alumnodata', component: DatoAlumnoComponent, canActivate: [AuthGuardService]},
   {path: 'regmateria', component: RegistrarMateriaComponent, canActivate: [AuthGuardService]},
-  {path: 'regprofesor', component: RegistrarProfesorComponent, canActivate: [AuthGuardService] }, /* canActivate: [AuthGuardService] */ 
-  
-
+  {path: 'regprofesor', component: RegistrarProfesorComponent, canActivate: [AuthGuardService], data:{RolesPermitidos:['Administrador']}}, 
   
 ];
 

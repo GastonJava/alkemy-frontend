@@ -43,47 +43,47 @@
 <div class="container-fluid">
 
    <div class="container form-container">
-      <form [formGroup]="inputs" class="" (ngSubmit)="login()">
-        <div class="form">
-          <h1 class="logintitle">Alkemy Login</h1>
-          <div class="grupo">
-            <div><input placeholder="Ingresar Email" type="text" formControlName="Email" required></div>
-            <!-- <div><label for="">Email</label></div> -->
-          </div>
+    <form [formGroup]="inputs" class="" (ngSubmit)="login()">
+      <div class="form">
+        <h1 class="logintitle">Alkemy Login</h1>
+        <div class="grupo">
+          <div><input placeholder="Ingresar Email" type="text" formControlName="Email" required></div>
+          <!-- <div><label for="">Email</label></div> -->
+        </div>
 
-          <div class="grupo">
-            <div><input  placeholder="Ingresar Password" type="password" formControlName="Pass"></div>
-            <!-- <div><label for="">Contraseña</label></div> -->
-          </div>
-          <div class="grupo">
+        <div class="grupo">
+          <div><input  placeholder="Ingresar Password" type="password" formControlName="Password"></div>
+          <!-- <div><label for="">Contraseña</label></div> -->
+        </div>
+        <div class="grupo">
 
-            <select class="texto" name="pickup_place" id="pickup_place" formControlName="Rol"> 
-              <option class="optiontxt" value="" selected="selected" disabled><p class="">Seleccionar rol</p></option>
-              <option *ngFor="let rol of roles" [ngValue]="rol">{{rol}}</option>             
-            </select>
-
-          </div>
-          <div class="grupo btns">
-            <div>
-              <button [disabled]="!inputs.valid">
-                <p *ngIf="!inputs.valid" class="text-danger invalidbtn">Completar Campos</p>
-                <p *ngIf="inputs.valid">Enviar Datos</p>
-              </button>
-            </div>
-
-            <div class="texto">
-              <span *ngIf="onErrorMessage; else invisibletext"  class="text-danger st-icon-pandora">EMAIL O CONTRASEÑA INVALIDOS</span>
-              <ng-template #invisibletext>
-    
-              </ng-template>
-              <span *ngIf="onSuccessMessage; else invisibletext" class="text-success st-icon-pandora">SE AH LOGEADO CON EXITO</span>
-            </div>
-          </div>
-
-          
+          <select class="texto" name="pickup_place" id="pickup_place" formControlName="Rolnombre"> 
+            <option class="optiontxt" value="" selected="selected" disabled><p class="">Seleccionar rol</p></option>
+            <option *ngFor="let rol of roles" [ngValue]="rol">{{rol}}</option>             
+          </select>
 
         </div>
-      </form>
+        <div class="grupo btns">
+          <div>
+            <button [disabled]="!inputs.valid">
+              <p *ngIf="!inputs.valid" class="text-danger invalidbtn">Completar Campos</p>
+              <p *ngIf="inputs.valid">Enviar Datos</p>
+            </button>
+          </div>
+
+          <div class="texto">
+            <span *ngIf="onErrorMessage; else invisibletext"  class="text-danger st-icon-pandora">EMAIL O CONTRASEÑA INVALIDOS</span>
+            <ng-template #invisibletext>
+  
+            </ng-template>
+            <span *ngIf="onSuccessMessage; else invisibletext" class="text-success st-icon-pandora">SE AH LOGEADO CON EXITO</span>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </form>
 
    </div>
 </div>
