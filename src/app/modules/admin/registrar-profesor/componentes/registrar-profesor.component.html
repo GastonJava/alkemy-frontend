@@ -1,0 +1,195 @@
+<div class="supercontainer">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="navbar sticky-top p-3">
+        <div class="titleinscripciones">
+          <h4 class="">REGISTRAR PROFESOR</h4>
+        </div>
+      </div>
+
+      <!--   <div class="cardspacer bg-danger"> -->
+      <div class="card">
+        <div class="cardinterior">
+          <div class="form-wrapper">
+            <form [formGroup]="inputs" (ngSubmit)="addProfesor()">
+              <div class="form-group row">
+                <label class="col-1"></label>
+                <div class="col-10">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fas fa-id-card"></i>
+                      </div>
+                    </div>
+                    <input
+                      id="text3"
+                      name="text3"
+                      placeholder="Ingresar DNI"
+                      type="text"
+                      class="form-control"
+                      formControlName="Dni"
+                    />
+                  </div>
+
+                  <div class="text-secondary" *ngIf="!Dni.valid && Dni.touched">
+                    Porfavor Ingresar DNI
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-1"></label>
+                <div class="col-10">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fas fa-ad"></i>
+                      </div>
+                    </div>
+                    <input
+                      id="text"
+                      name="text"
+                      placeholder="Ingresar Nombre"
+                      type="text"
+                      required="required"
+                      class="form-control"
+                      formControlName="Nombre"
+                    />
+                  </div>
+
+                  <div
+                    class="text-secondary"
+                    *ngIf="!Nombre.valid && Nombre.touched"
+                  >
+                    Porfavor Ingresar Nombre
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-1"></label>
+                <div class="col-10">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fas fa-user"></i>
+                      </div>
+                    </div>
+                    <input
+                      id="text1"
+                      name="text1"
+                      placeholder="Ingresar Apellido"
+                      type="text"
+                      required="required"
+                      class="form-control"
+                      formControlName="Apellido"
+                    />
+                  </div>
+                  <div
+                    class="text-secondary"
+                    *ngIf="!Apellido.valid && Apellido.touched"
+                  >
+                    Porfavor Ingresar Apellido
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label class="col-1"></label>
+                <div class="col-10">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <i class="fa fa-toggle-on" aria-hidden="true"></i>
+                      </div>
+
+                      <input name="activo" placeholder="1:activo | 2:no activo" type="number" class="form-control" formControlName="Activo_docente" />
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+
+             <!--  <div class="form-group row">
+                <label class="col-1"></label>
+                <div class="col-10">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <ng-bootstrap-datetime-angular
+                        inputDatetimeFormat="yyyy/MM/dd hh:mm"
+                        formControlName="Fecha"                  INGRESAR FECHA LUEGO PORQUE
+                        name="activeEndDate"                     HAY QUE CAMBIAR LA BASE DE DATOS PARA AGREGAR 
+                                                                AL ULTIMO LO HARE 
+                      ></ng-bootstrap-datetime-angular>
+
+                       <div class="input-group-text">
+                          <i class="fa fa-calendar"></i>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+
+              <div class="form-group row">
+                <div class="offset-1 col-10">
+                  <button
+                    name="submit"
+                    class="btn"
+                    [disabled]="!Dni.valid || !Nombre.valid || !Apellido.valid"
+                  >
+                    Enviar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!--  </div> -->
+    </div>
+
+    <!--  <div class="sidebar-container">
+     
+      <div class="container-sidebar">
+    
+        <div class="nombre-alumno">
+          <p class="starttitle">PONCE GASTON</p>
+        </div>
+        <p class="starttxt">Condicion: Regular</p>
+        <p class="starttxt">Total Materias: 10</p>
+        <p class="starttxt">Aprobadas: 3</p>
+        <p class="starttxt">Proximo examen: <br/>03/05/2021</p>
+  
+        <div class="links-wrapper">
+          <li id="txt">
+            <a routerLink="/consultaralumno" routerLinkActive="activado"
+              >Consultar materia
+            </a>
+          </li>
+        
+          <li id="txt">
+            <a routerLink="/registraralumno" routerLinkActive="activado"
+              >Registrar materia</a
+            >
+          </li>
+        
+          <li id="txt">
+            <a routerLink="/principalform" routerLinkActive="activado"
+              >Formulario login</a
+            >
+          </li>
+        
+        </div>
+  
+      </div>
+      
+     
+    </div> -->
+  </div>
+</div>
+
+<!-- <span class="card card-title text-secondary" *ngIf="docenteRegistrado"> Profesor registrado con exito</span> -->
+
+<!-- FOOTER FOOTER -->
+<!-- <div class="container-footer">
+  <app-footer></app-footer>
+</div> -->

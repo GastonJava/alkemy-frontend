@@ -1,0 +1,733 @@
+@import "src/app/shared/themes/paletaprincipal";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container-fluid {
+  /*    background-color: red; */
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  /*  background-color: blue; */
+  height: 90%; // ----- configurar la altura para cada pantalla
+  /*   display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+#btnsobretodo {
+  position: relative;
+  z-index: 100;
+}
+
+button {
+  z-index: 100;
+}
+
+nav {
+  /* position: relative; */
+  height: 100%;
+  width: 100%;
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: width 0.4s ease;
+  h2 {
+    font-size: 1.4vw;
+  }
+
+  .principal {
+    /*  background: purple; */
+    width: 80%;
+    height: 50%;
+
+    ul {
+      /* background-color: yellow; */
+      height: 90%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      li {
+        font-size: 0.8vw;
+      }
+    }
+  }
+  .urls {
+    /*         background: pink; */
+    width: 80%;
+    height: 50%;
+    ul {
+      /* background-color: white; */
+      height: 90%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      li {
+        b {
+          font-size: 0.8vw;
+        }
+      }
+    }
+  }
+
+  ul,
+  li,
+  a {
+    list-style: none;
+    text-decoration: none;
+    color: $texto_azul1;
+  }
+
+  .active {
+    color: red;
+  }
+}
+
+/* RESPOSNIVE ADMIN SIDEBAR */
+
+/* super desktop large*/
+@media screen and (max-width: 1600px) {
+  .container-fluid {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: 95%;
+    border-radius: 5px;
+    background: #23252f;
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+  button {
+    z-index: 100;
+  }
+
+  nav {
+    /* position: relative; */
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.4s ease;
+    h2 {
+      font-size: 1.2vw;
+    }
+
+    .principal {
+       background: purple;
+      width: 90%;
+      height: 60%;
+
+      ul {
+       /*  background-color: yellow; */
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        li {
+          font-size: 0.8vw;
+        }
+      }
+    }
+    .urls {
+      background: pink;
+      width: 90%;
+      height: 60%;
+      ul {
+        /* background-color: white; */
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        li {
+          b {
+            font-size: 0.8vw;
+          }
+        }
+      }
+    }
+
+    ul,
+    li,
+    a {
+      list-style: none;
+      text-decoration: none;
+      color: $texto_azul1;
+    }
+
+    .active {
+      color: red;
+    }
+  }
+}
+
+/* desktop styles*/
+@media screen and (max-width: 1200px) {
+  .container-fluid {
+    height: 100%;
+    background-color: white;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 85%;
+    border-radius: 5px;
+    background: #23252f;
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+  button {
+    z-index: 100;
+  }
+
+  nav {
+    /* position: relative; */
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: width 0.4s ease;
+    h2 {
+      font-size: 1.6vw;
+    }
+
+    .principal {
+      /*  background: purple; */
+      width: 80%;
+      height: 50%;
+
+      ul {
+        background-color: yellow;
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        li {
+          font-size: 1.3vw;
+        }
+      }
+    }
+    .urls {
+      /*         background: pink; */
+      width: 80%;
+      height: 50%;
+      ul {
+        background-color: white;
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        li {
+          b {
+            font-size: 1.1vw;
+          }
+        }
+      }
+    }
+
+    ul,
+    li,
+    a {
+      list-style: none;
+      text-decoration: none;
+      color: $texto_azul1;
+    }
+
+    .active {
+      color: red;
+    }
+  }
+}
+
+/* large tablets & laptop styles */
+@media screen and (max-width: 960px) {
+  .container-fluid {
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 75%;
+    border-radius: 5px;
+    background: #23252f;
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+  button {
+    z-index: 100;
+  }
+
+  nav {
+    /* position: relative; */
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: width 0.4s ease;
+    h2 {
+      font-size: 1.4vw;
+    }
+
+    .direccion {
+      display: flex;
+      flex-direction: row;
+      background-color: blue;
+      width: 100%;
+    }
+
+    .principal {
+      /*  background: purple; */
+      width: 100%;
+      height: 100%;
+
+      ul {
+        background-color: yellow;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        li {
+          font-size: 1.4vw;
+        }
+      }
+    }
+    .urls {
+      /*         background: pink; */
+      width: 100%;
+      height: 100%;
+      ul {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        li {
+          b {
+            font-size: 1.4vw;
+          }
+        }
+      }
+    }
+
+    ul,
+    li,
+    a {
+      list-style: none;
+      text-decoration: none;
+      color: $texto_azul1;
+    }
+
+    .active {
+      color: red;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container-fluid {
+    background-color: yellow;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 75%;
+    border-radius: 5px;
+    background: #23252f;
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+  button {
+    z-index: 100;
+  }
+
+  nav {
+    /* position: relative; */
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: width 0.4s ease;
+    h2 {
+      font-size: 1.4vw;
+    }
+
+    .direccion {
+      display: flex;
+      flex-direction: row;
+      background-color: blue;
+      width: 100%;
+    }
+
+    .principal {
+      /*  background: purple; */
+      width: 100%;
+      height: 100%;
+
+      ul {
+        background-color: yellow;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        li {
+          font-size: 1.4vw;
+        }
+      }
+    }
+    .urls {
+      /*         background: pink; */
+      width: 100%;
+      height: 100%;
+      ul {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        li {
+          b {
+            font-size: 1.4vw;
+          }
+        }
+      }
+    }
+
+    ul,
+    li,
+    a {
+      list-style: none;
+      text-decoration: none;
+      color: $texto_azul1;
+    }
+
+    .active {
+      color: red;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .container-fluid {
+    background-color: purple;
+    height: 80%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    background: #23252f;
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+  button {
+    z-index: 100;
+  }
+
+  nav {
+    /* position: relative; */
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: width 0.4s ease;
+    h2 {
+      font-size: 1.4vw;
+    }
+
+    .principal {
+      /*  background: purple; */
+      width: 100%;
+      height: 100%;
+
+      ul {
+        background-color: yellow;
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        li {
+          font-size: 1.9vw;
+        }
+      }
+    }
+    .urls {
+      /*         background: pink; */
+      width: 100%;
+      height: 100%;
+      ul {
+        background-color: white;
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        li {
+          b {
+            font-size: 1.9vw;
+          }
+        }
+      }
+    }
+
+    ul,
+    li,
+    a {
+      list-style: none;
+      text-decoration: none;
+      color: $texto_azul1;
+    }
+
+    .active {
+      color: red;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .container-fluid {
+    background-color: turquoise;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    background: #23252f;
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+  .direccion {
+    display: flex;
+    flex-direction: row;
+    background-color: red !important;
+    width: 100% !important;
+    
+  }
+
+  button {
+    z-index: 100;
+  }
+
+  nav {
+    /* position: relative; */
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: width 0.4s ease;
+    h2 {
+      display: none;
+      font-size: 1.2vw;
+    }
+
+    .principal {
+      /*  background: purple; */
+      width: 100%;
+      height: 100%;
+
+      ul {
+        background-color: yellow;
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        li {
+          font-size: 1.9vw;
+        }
+      }
+    }
+
+    .urls {
+      /*         background: pink; */
+      width: 100%;
+      height: 100%;
+      border-bottom-left-radius: 10px;
+      ul {
+        background-color: white;
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        li {
+          b {
+            font-size: 1.9vw;
+          }
+        }
+      }
+    }
+
+    ul,
+    li,
+    a {
+      list-style: none;
+      text-decoration: none;
+      color: $texto_azul1;
+    }
+
+    .active {
+      color: red;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container-fluid {
+    height: 60%;
+    background-color: pink;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%;
+      height: 100%; */
+    border-radius: 5px;
+    background: #23252f;
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+  button {
+    z-index: 100;
+  }
+
+  nav {
+    /* position: relative; */
+    /*  height: 100%;
+        width: 100%; */
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: width 0.4s ease;
+    h2 {
+      font-size: 1.4vw;
+    }
+
+    .principal {
+      /*  background: purple; */
+      /*  width: 100%;
+            height: 100%; */
+
+      ul {
+        background-color: yellow;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        li {
+          font-size: 1.6vw;
+        }
+      }
+    }
+    .urls {
+      /*         background: pink; */
+      /*  width: 100%;
+            height: 100%; */
+      ul {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        li {
+          b {
+            font-size: 1.2vw;
+          }
+        }
+      }
+    }
+
+    ul,
+    li,
+    a {
+      list-style: none;
+      text-decoration: none;
+      color: $texto_azul1;
+    }
+
+    .active {
+      color: red;
+    }
+  }
+}

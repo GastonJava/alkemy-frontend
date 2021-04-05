@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* intentamos fdata picker */
+/* .input-group > .form-control, .input-group > .form-control-plaintext, .input-group > .custom-select, .input-group > .custom-file {
+    width: 10px !important;
+    min-width: 0;
+    margin-bottom: 0;
+  } */
+@media screen and (min-width: 320px) and (max-width: 575px) {
+  input.form-control, .input-group-append {
+    height: 20px !important;
+  }
+  .fa-calendar {
+    display: none;
+  }
+}
+
+
+
+/* ._ngcontent-scf-c1{
+    background-color: red !important;
+    height: 10px !important;
+  } */
+/* .fech{
+    height: 10px;
+  } */
+/*# sourceMappingURL=styles.css.map */

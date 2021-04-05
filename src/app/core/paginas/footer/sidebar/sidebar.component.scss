@@ -1,0 +1,63 @@
+@import "src/app/shared/themes/_paletaprincipal";
+
+@media screen and (min-width: 1280px) {
+    //For Big TV's (HD Screens)
+    .container-fluid {
+      width: 1250px;
+  
+    }
+    
+    input::placeholder{
+      font-size: 1.0vw;
+    }
+  
+    .nombre-alumno{
+      text-align: center;
+      .starttitle{
+       font-size: 1.2vw;
+      }
+    }
+    
+    #txt{
+      text-decoration: none;
+      list-style: none;
+      a{
+        display: block;
+        height: 28px;
+        color: $texto-azul4;
+        font-size: 1.0vw;
+      }
+    }
+  
+    .starttxt{
+      font-size: 1.0vw;
+    }
+  
+    .activado{
+      color: green !important;
+    }
+  
+    .formtitulo {
+        left: 0;
+        width: 20vw;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        span {
+          display: block;
+          font-size: 1.3vw;
+        }
+        form {
+          height: 40%;
+        }
+        .formtitulo_insidewrapper{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+          height: 40%;
+        }
+      
+    }  
+}

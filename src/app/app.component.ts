@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
-import { UrlbooleanService } from './servicios todos/urlboolean.service';
+import { UrlbooleanService } from './shared/services/urlboolean.service';
 
 @Component({
   selector: 'app-root',

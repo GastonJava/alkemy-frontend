@@ -1,0 +1,135 @@
+<!-- <app-navbar></app-navbar> -->
+<div class="container-fluid">
+
+  <div class="formtitulo">
+
+     
+    <!-- aca viene la condicion total de matrias y aprobadas -->
+    <div class="container container-sidebar">
+
+      <div class="nombre-alumno">
+        <p class="starttitle">PONCE GASTON</p>
+      </div>
+      <!-- <br /> -->
+      <p class="starttxt">Condicion: Regular</p>
+      <p class="starttxt">Total Materias: 10</p>
+      <p class="starttxt">Aprobadas: 3</p>
+      <p class="starttxt">Proximo examen: <br/>03/05/2021</p>
+      <!-- <br /> -->
+    </div>
+
+    <div class="formtitulo_insidewrapper">
+
+      <span>CONSULTAR MATERIAS INSCRIPTAS</span>
+      
+      <form [formGroup]="grupoFiltrar" (ngSubmit)="buscarDatos()" class="">
+        <div class="navbar sticky-top regnavbar">
+          <input type="text" placeholder="NOMBRE DE MATERIA" [(ngModel)]='title' formControlName="buscar"/>
+        </div>     
+      </form>
+
+    </div>
+
+    <div class="links-wrapper">
+      <li id="txt">
+        <a routerLink="/consultaralumno" routerLinkActive="activado"
+          >Consultar materia
+        </a>
+      </li>
+  
+      <li id="txt">
+        <a routerLink="/registraralumno" routerLinkActive="activado"
+          >Registrar materia</a
+        >
+      </li>
+  
+      <li id="txt">
+        <!-- routerLink="/principalform" -->
+        <a routerLink="/principalform" routerLinkActive="activado" (click)="salir()"
+          >Formulario login</a
+        >
+      </li>
+
+    </div>
+  
+
+    <!-- <app-sidebar></app-sidebar> -->
+    <!-- <app-footer></app-footer> -->
+  </div>
+ 
+  
+  <div class="container leftsmall">  <!-- leftsmall -->
+
+    <ng-container *ngIf="(materias | filter: title) as resultado">
+    
+      <ng-container *ngFor="let materia of resultado">
+    <!-- <ng-container *ngFor="let materia of materias | filter:title index as i"> -->
+      <div class="cardspacer"> 
+       <!-- probando cambiar diseño -->
+       <div class="card">
+        <div class="cardinterior">
+          <div class="left">
+            <div class="iconofecha">
+              <div class="icono">
+                <i class="far fa-clock"></i>
+              </div>
+  
+              <div class="profesortitle">
+                <h4>{{materia.fecha}}</h4>
+                <p>Prof: {{materia.nombre_d}} {{materia.apellido_d}}</p>
+              </div>
+            </div>
+  
+            <div class="virtual">
+              <div class="icono">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="ubicaciontxt profesortitle">
+                <h4>{{materia.ubicacion}}</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="txtcontainer">
+          <h3 class="titulo">{{materia.nombre}}</h3>
+          <div class="icono">
+              <i class="far fa-trash-alt" (click)="eliminar(materia.id, materia.nombre)"></i>
+
+          </div>
+        </div>
+
+       </div>
+      </div>
+    </ng-container>
+
+    <div class="image-container" *ngIf="resultado.length === 0">
+      <img class="picnotfound" src="/assets/error.jpg" alt="Error Message">
+
+      <h1 class="text-center">No hay materias a rendir</h1>
+    
+    </div>
+    
+   
+
+  </ng-container>
+  </div>
+</div>
+
+<!-- templates para las alertas -->
+
+<!-- <ng-template id="my-template"> -->
+
+<!-- </ng-template> -->
+
+<!-- <template id="alert-template">
+   <swal-title>
+      Este es el titulo del alert
+   </swal-title>
+</template> -->
+<!-- templates para las alertas -->
+
+<!-- footer -->
+<!-- <div class="container-footer">
+  <app-footer></app-footer>
+</div> -->

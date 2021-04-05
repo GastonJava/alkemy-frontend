@@ -1,0 +1,701 @@
+@import "src/app/shared/themes/paletaprincipal";
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 90%;
+  border-radius: 5px;
+  background: #23252f;
+  box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+}
+
+.titleinscripciones {
+  h4 {
+    color: $texto-azul2;
+    font-size: 3vw;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+  background: $c_cuarto_d;
+  box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+}
+
+// card spacer
+.cardspacer {
+  padding: 15px;
+  /*  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%; */
+}
+
+.cardinterior {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 900px;
+  width: 60%;
+}
+
+.card-adm-materias {
+  height: 40%;
+  width: 90%;
+  background: $c_cuarto_d;
+  box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+  color: white;
+}
+
+.card-adm-materias:hover {
+  transition: all 0.8s ease-out;
+  border-radius: 13px;
+  background: #1a1c24;
+  box-shadow: -12px -12px 24px #171920, 12px 12px 24px #1d1f28;
+  border: 1px solid white;
+  h2 {
+    a {
+      color: $texto-azul3;
+      text-decoration: none;
+    }
+  }
+}
+
+.card-adm-maestros {
+  height: 40%;
+  width: 90%;
+  background: $c_cuarto_d;
+  box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+  color: white;
+}
+
+.card-adm-maestros:hover {
+  transition: all 0.7s ease-out;
+  border-radius: 13px;
+  background: #1a1c24;
+  box-shadow: -12px -12px 24px #171920, 12px 12px 24px #1d1f28;
+  border: 1px solid white;
+  h2 {
+    a {
+      color: $texto-azul3;
+      text-decoration: none;
+    }
+  }
+}
+
+.card-adm-materias,
+.card-adm-maestros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    a {
+      color: $texto-azul1;
+      mix-blend-mode: difference;
+    }
+  }
+}
+
+// responsive
+@media screen and (max-width: 1980px) {
+
+  .container-fluid {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: 90%;
+    border-radius: 5px;
+    background: #23252f;
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+  .titleinscripciones {
+    h4 {
+      color: $texto-azul2;
+      font-size: 3vw;
+    }
+  }
+
+  .cardspacer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 85%;
+
+    .card {
+      height: 90%;
+      width: 70%;
+    }
+  }
+
+  .card-adm-materias {
+    height: 35%;
+    width:90%;
+    background: $c_cuarto_d;
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    color: white;
+    h2 {
+      a {
+        font-size: 1.5vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-adm-materias:hover {
+    transition: all 0.8s ease-out;
+    border-radius: 13px;
+    background: #1a1c24;
+    box-shadow: -12px -12px 24px #171920, 12px 12px 24px #1d1f28;
+    border: 1px solid white;
+    h2 {
+      a {
+        font-size: 1.2vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-adm-maestros {
+    height: 35%;
+    width: 90%;
+    background: $c_cuarto_d;
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    color: white;
+    h2 {
+      a {
+        font-size: 1.4vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-adm-maestros:hover {
+    transition: all 0.7s ease-out;
+    border-radius: 13px;
+    background: #1a1c24;
+    box-shadow: -12px -12px 24px #171920, 12px 12px 24px #1d1f28;
+    border: 1px solid white;
+    h2 {
+      a {
+        font-size: 1.2vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* super desktop large*/
+@media screen and (max-width: 1600px) {
+  .container-fluid {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: 95%;
+    border-radius: 5px;
+    background: #23252f;
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+  .cardspacer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+
+    .card {
+      height: 80%;
+      width: 70%;
+    }
+  }
+
+  .card-adm-materias {
+    height: 38%;
+    width:90%;
+    background: $c_cuarto_d;
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    color: white;
+    h2 {
+      a {
+        font-size: 1.6vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-adm-materias:hover {
+    transition: all 0.8s ease-out;
+    border-radius: 13px;
+    background: #1a1c24;
+    box-shadow: -12px -12px 24px #171920, 12px 12px 24px #1d1f28;
+    border: 1px solid white;
+    h2 {
+      a {
+        font-size: 1.4vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-adm-maestros {
+    height: 38%;
+    width: 90%;
+    background: $c_cuarto_d;
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    color: white;
+    h2 {
+      a {
+        font-size: 1.6vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-adm-maestros:hover {
+    transition: all 0.7s ease-out;
+    border-radius: 13px;
+    background: #1a1c24;
+    box-shadow: -12px -12px 24px #171920, 12px 12px 24px #1d1f28;
+    border: 1px solid white;
+    h2 {
+      a {
+        font-size: 1.4vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/* desktop styles*/
+@media screen and (max-width: 1200px) {
+ /*  .container-fluid {
+
+  } */
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 95%;
+    border-radius: 5px;
+    background: #23252f;
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+  .titleinscripciones {
+    h4 {
+      color: $texto-azul2;
+      font-size: 5vw;
+    }
+  }
+
+  .cardspacer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 98%;
+
+    .card {
+      height: 65%;
+      width: 90%;
+    }
+  }
+
+  .card-adm-materias {
+    height: 36%;
+    width: 90%;
+    background: $c_cuarto_d;
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    color: white;
+    h2 {
+      a {
+        font-size: 2.6vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-adm-materias:hover {
+    transition: all 0.8s ease-out;
+    border-radius: 13px;
+    background: #1a1c24;
+    box-shadow: -12px -12px 24px #171920, 12px 12px 24px #1d1f28;
+    border: 1px solid white;
+    h2 {
+      a {
+        font-size: 2.0vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-adm-maestros {
+    height: 36%;
+    width: 90%;
+    background: $c_cuarto_d;
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    color: white;
+    h2 {
+      a {
+        font-size: 2.6vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-adm-maestros:hover {
+    transition: all 0.7s ease-out;
+    border-radius: 13px;
+    background: #1a1c24;
+    box-shadow: -12px -12px 24px #171920, 12px 12px 24px #1d1f28;
+    border: 1px solid white;
+    h2 {
+      a {
+        font-size: 2.0vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+
+}
+
+/* large tablets & laptop styles */
+@media screen and (max-width: 960px) {
+  /* .container-fluid {
+
+  } */
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 85%;
+    border-radius: 5px;
+    background: #23252f;
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+   //titulo
+   .titleinscripciones{
+    h4{
+      font-size: 4.0vw;
+    }
+  }
+
+  .cardspacer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+
+    .card {
+      height: 78%;
+      width: 100%;
+    }
+  }
+
+  .card-adm-materias {
+    height: 35%;
+    width: 100%;
+    background: $c_cuarto_d;
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    color: white;
+    h2 {
+      a {
+        font-size: 2.3vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-adm-materias:hover {
+    transition: all 0.8s ease-out;
+    border-radius: 13px;
+    background: #1a1c24;
+    box-shadow: -12px -12px 24px #171920, 12px 12px 24px #1d1f28;
+    border: 1px solid white;
+    h2 {
+      a {
+        font-size: 1.4vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-adm-maestros {
+    height: 35%;
+    width: 100%;
+    background: $c_cuarto_d;
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    color: white;
+    h2 {
+      a {
+        font-size: 2.2vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-adm-maestros:hover {
+    transition: all 0.7s ease-out;
+    border-radius: 13px;
+    background: #1a1c24;
+    box-shadow: -12px -12px 24px #171920, 12px 12px 24px #1d1f28;
+    border: 1px solid white;
+    h2 {
+      a {
+        font-size: 1.4vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  /* .container-fluid {
+
+  }
+ */
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 90%;
+    border-radius: 5px;
+    background: #23252f;
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+  //titulo
+  .titleinscripciones{
+    h4{
+      font-size: 4.9vw;
+    }
+  }
+
+  .cardspacer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+
+    .card {
+      height: 60%;
+      width: 100%;
+    }
+  }
+
+  .card-adm-materias {
+    height: 31%;
+    width: 100%;
+    background: $c_cuarto_d;
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    color: white;
+    h2 {
+      a {
+        font-size: 3.3vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-adm-materias:hover {
+    transition: all 0.8s ease-out;
+    border-radius: 13px;
+    background: #1a1c24;
+    box-shadow: -12px -12px 24px #171920, 12px 12px 24px #1d1f28;
+    border: 1px solid white;
+    h2 {
+      a {
+        font-size: 2.8vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-adm-maestros {
+    height: 31%;
+    width: 100%;
+    background: $c_cuarto_d;
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    color: white;
+    h2 {
+      a {
+        font-size: 3.3vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-adm-maestros:hover {
+    transition: all 0.7s ease-out;
+    border-radius: 13px;
+    background: #1a1c24;
+    box-shadow: -12px -12px 24px #171920, 12px 12px 24px #1d1f28;
+    border: 1px solid white;
+    h2 {
+      a {
+        font-size: 2.8vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+ /*  .container-fluid {
+
+  } */
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    background: #23252f;
+    box-shadow: 5px -5px 10px #0e0f13, -5px 5px 10px #383b4b;
+  }
+
+  //titulo
+  .titleinscripciones{
+    h4{
+      font-size: 4.9vw;
+    }
+  }
+
+  .cardspacer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95%;
+
+    .card {
+      height: 70%;
+      width: 110%;
+    }
+  }
+
+  .card-adm-materias {
+    height: 31%; 
+    width: 110%;
+    background: $c_cuarto_d;
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    color: white;
+    h2 {
+      a {
+        font-size: 3.6vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-adm-materias:hover {
+    transition: all 0.8s ease-out;
+    border-radius: 13px;
+    background: #1a1c24;
+    box-shadow: -12px -12px 24px #171920, 12px 12px 24px #1d1f28;
+    border: 1px solid white;
+    h2 {
+      a {
+        font-size: 2.8vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-adm-maestros {
+    height: 31%;
+    width: 110%;
+    background: $c_cuarto_d;
+    box-shadow: -15px -15px 30px #16181e, 15px 15px 30px #303240;
+    color: white;
+    h2 {
+      a {
+        font-size: 3.6vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .card-adm-maestros:hover {
+    transition: all 0.7s ease-out;
+    border-radius: 13px;
+    background: #1a1c24;
+    box-shadow: -12px -12px 24px #171920, 12px 12px 24px #1d1f28;
+    border: 1px solid white;
+    h2 {
+      a {
+        font-size: 2.8vw;
+        color: $texto-azul3;
+        text-decoration: none;
+      }
+    }
+  }
+}

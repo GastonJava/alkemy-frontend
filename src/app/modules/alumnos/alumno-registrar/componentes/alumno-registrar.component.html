@@ -1,0 +1,155 @@
+<!-- <app-navbar></app-navbar> -->
+<div class="container-fluid">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <div class="formtitulo">
+
+    <div class="container container-sidebar">
+
+      <div class="nombre-alumno">
+        <p class="starttitle">PONCE GASTON</p>
+      </div>
+      <!-- <br /> -->
+      <p class="starttxt">Condicion: Regular</p>
+      <p class="starttxt">Total Materias: 10</p>
+      <p class="starttxt">Aprobadas: 3</p>
+      <p class="starttxt">Proximo examen: <br/>03/05/2021</p>
+      <!-- <br /> -->
+    </div>
+
+    <div class="formtitulo_insidewrapper">
+
+      <span>CONSULTAR MATERIAS INSCRIPTAS</span>
+      
+      <form [formGroup]="grupoFiltrar" (ngSubmit)="buscarDatos()" class="">
+        <div class="navbar sticky-top regnavbar">
+          <input type="text" placeholder="NOMBRE DE MATERIA" [(ngModel)]='title' formControlName="buscar"/>
+        </div>     
+      </form>
+
+    </div>
+
+    <div class="links-wrapper">
+      <li id="txt">
+        <a routerLink="/consultaralumno" routerLinkActive="activado"
+          >Consultar materia
+        </a>
+      </li>
+  
+      <li id="txt">
+        <a routerLink="/registraralumno" routerLinkActive="activado"
+          >Registrar materia</a
+        >
+      </li>
+  
+      <li id="txt">
+        <!--  --> 
+        <a routerLink="/principalform" routerLinkActive="activado" (click)="salir()">
+          Volver a inicio
+        </a>
+      </li>
+
+    </div>
+   
+
+
+
+   <!--  <span>Buscar Materia A Inscribirse</span>
+    <form [formGroup]="grupoFiltrar" (ngSubmit)="buscarDatos()" class="">
+      <div class="navbar sticky-top regnavbar">
+
+        <input
+          type="text"
+          placeholder="Nombre De Materia"
+          [(ngModel)]="title"
+          formControlName="buscar"
+        />
+      </div>
+    </form> -->
+  </div>
+
+  <div class="container leftsmall">
+    <!-- <ng-container *ngIf="mostrarmensaje"
+      ><p class="mensaje">
+        Guardado con exito en CONSULTAS encontraras tu estado
+      </p></ng-container
+    > -->
+
+    <!-- ALUMNO REGISTRARA SUS MATERIAS  -->
+     
+    <ng-container *ngIf="(materias | filter: title) as resultado">
+      
+      <ng-container *ngFor="let materia of resultado">
+
+        
+
+        <div class="cardspacer">
+
+         <ng-template #tooltip>
+          <p class="tooltipr">Inscribirse a rendir <strong>{{materia.nombre}}</strong>!</p>
+         </ng-template>
+         <!-- tooltip="INSCRIBIRSE A RENDIR EXAMEN" -->
+          <div [tooltip]="tooltip" content-type="template" [options]="tooltipconfig" class="card" (click)="obtenerDatos(materia)">
+
+            <div class="cardinterior">
+
+              <div class="left">
+
+                <div class="iconofecha">
+                  
+                  <div class="icono">
+                    <i class="far fa-clock"></i>
+                  </div>
+  
+                  <div class="profesortitle">
+                    <p>Prof: {{ materia.nombre_d }} {{ materia.apellido_d }}</p>
+                    <h4>{{ materia.fecha }}</h4>
+                  </div>
+
+                </div>
+  
+                <div class="virtual">
+
+                  <div class="icono">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+
+                  <div class="ubicaciontxt profesortitle">
+                    <h4>{{ materia.ubicacion }}</h4>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+  
+            <div class="txtcontainer">
+              <h3 class="titulo">{{ materia.nombre }}</h3>
+            </div>
+
+          </div>
+
+         
+
+        </div>
+  
+      </ng-container>
+   
+     
+      <div class="image-container bg-danger" *ngIf="resultado.length === 0">
+        <img class="picnotfound" src="/assets/error.jpg" alt="Error Message">
+
+        <h1 class="text-center">No hay materias a rendir</h1>
+      
+       </div>
+    
+
+    </ng-container>
+
+  </div>
+
+  <!-- footer -->
+ <!--  <div class="container-footer">
+    
+    <app-footer></app-footer>
+  </div> -->
+</div>
