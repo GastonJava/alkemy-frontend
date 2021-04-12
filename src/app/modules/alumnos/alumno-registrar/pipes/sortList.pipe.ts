@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+/* import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'sortList'
@@ -28,3 +28,4 @@ export class SortListPipe implements PipeTransform {
   }
 
 }
+ */

@@ -3,7 +3,7 @@ import { rendererTypeName } from "@angular/compiler";
 import { THIS_EXPR } from "@angular/compiler/src/output/output_ast";
 import { Component, OnDestroy, OnInit } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
-import gsap from "gsap";
+/* import gsap from "gsap"; */
 import { Observable } from "rxjs";
 import { AuthService } from "src/app/modules/formulario/services/auth.service";
 import { TodoserviceService } from "src/app/shared/services/todoservice.service";

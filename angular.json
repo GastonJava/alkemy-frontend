@@ -32,7 +32,6 @@
             "styles": [
               "../node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
-              
             ],
             "scripts": []
           },
@@ -121,8 +120,13 @@
               "devServerTarget": "alkemi-university-app:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "alkemi-university-app"
 }

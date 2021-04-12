@@ -13,13 +13,14 @@ import { AdminfooterComponent } from './core/paginas/footer/adminfooter/adminfoo
 import { FooterComponent } from './core/paginas/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { NavbarModule } from './core/paginas/navbar/navbar.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoaderComponent,
-    NavbarComponent,
+  
     FooterComponent,
     AdminfooterComponent,
     SidebarComponent,
@@ -29,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    NavbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

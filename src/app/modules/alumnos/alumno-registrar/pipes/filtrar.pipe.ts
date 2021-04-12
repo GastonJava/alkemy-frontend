@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+/* import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'filtrar'
@@ -23,3 +23,4 @@ export class FiltrarPipe implements PipeTransform {
   }
 
 }
+ */

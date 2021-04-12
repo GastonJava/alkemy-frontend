@@ -1,4 +1,4 @@
-import { DatePipe } from '@angular/common';
+/* import { DatePipe } from '@angular/common';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -13,3 +13,4 @@ export class ArraypipePipe implements PipeTransform {
   }
 
 }
+ */

@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+/* import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'testingfilter'
@@ -9,4 +9,4 @@ export class TestingfilterPipe implements PipeTransform {
     return null;
   }
 
-}
+} */
