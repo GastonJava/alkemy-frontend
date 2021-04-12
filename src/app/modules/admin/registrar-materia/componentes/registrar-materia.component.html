@@ -75,11 +75,11 @@
                           <!-- <span class="text-danger" *ngIf="!Apellido_d.valid && Apellido_d.touched">Ingresar Apellido</span> -->
                       </div>
 
-                      <div type="button" class="esconderbtn" (click)="obtenerdocente()" >BUSCAR DOCENTE</div> <!-- [disabled]="!Dni.valid" -->
-                      <button class="esconderbtn" [disabled]="!inputs.valid">AGREGAR MATERIA</button>
+                     <!--  <div type="button" class="esconderbtn" (click)="obtenerdocente()">BUSCAR DOCNTE</div> 
+                      <button class="esconderbtn" [disabled]="!inputs.valid">AGREGAR MATERIA</button> -->
                   </div>
                   <div class="form-groupbtn">
-                    <button type="button" class="btn btn-secondary px-4 float-left" (click)="obtenerdocente()" >BUSCAR DOCENTE</button> <!-- [disabled]="!Dni.valid" -->
+                    <button type="button" class="btn btn-secondary px-4 float-left" [disabled]="!Dni.valid" (click)="obtenerdocente()" >BUSCAR DOCENTE</button> <!-- [disabled]="!Dni.valid" -->
                     <button class="btn btn-primary px-4 float-right" [disabled]="!inputs.valid">AGREGAR MATERIA</button>
                   </div>
                   
@@ -106,22 +106,22 @@
     <div class="container-sidebar">
   
       <div class="nombre-alumno">
-        <p class="starttitle">PONCE GASTON</p>
+        <p class="starttitle">Admin: {{nombreuser}}</p>
       </div>
-      <p class="starttxt">Condicion: Regular</p>
+      <!-- <p class="starttxt">Condicion: Regular</p>
       <p class="starttxt">Total Materias: 10</p>
       <p class="starttxt">Aprobadas: 3</p>
-      <p class="starttxt">Proximo examen: <br/>03/05/2021</p>
+      <p class="starttxt">Proximo examen: <br/>03/05/2021</p> -->
 
       <div class="links-wrapper">
         <li id="txt">
-          <a routerLink="/consultaralumno" routerLinkActive="activado"
-            >Consultar materia
+          <a routerLink="/adminprincipal/regprofesor" routerLinkActive="activado"
+            >Registrar profesor
           </a>
         </li>
       
         <li id="txt">
-          <a routerLink="/registraralumno" routerLinkActive="activado"
+          <a routerLink="/adminprincipal/regmateria" routerLinkActive="activado"
             >Registrar materia</a
           >
         </li>

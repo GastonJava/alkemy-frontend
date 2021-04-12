@@ -15,7 +15,7 @@ export class TodoserviceService {
     this.headers.append("Content-Type", "application/json");
     this.headers.append(
       "Authorization",
-      "Bearer " + localStorage.getItem("jwt")
+      "Bearer" + localStorage.getItem("jwt")
     );
   }
 
@@ -67,10 +67,29 @@ export class TodoserviceService {
   agregarDocente(profesor: IProfesor): Observable<any> {
     return this.http.post("https://localhost:44325/api/Gestiondocente", profesor, {
       headers: new HttpHeaders({
-        "Content-Type": "application/json",
+        "Content-Type" : "application/json",
         Authorization: `Bearer ${localStorage.getItem("jwt")}`,
       }),
     });
     /* return this.http.post(this.urlbase + "api/Gestiondocente", datos); */
   }
+
+  listadoDocente(){
+    return this.http.get("https://localhost:44325/api/Gestiondocente/docentes", {
+      headers: new HttpHeaders({
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+      }),
+    });
+  }
+
+  traerAdmin(){
+    return this.http.get("https://localhost:44325/api/Gestiondocente/docentes", {
+      headers: new HttpHeaders({
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+      }),
+    });
+  }
+
 }

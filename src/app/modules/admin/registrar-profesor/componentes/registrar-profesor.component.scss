@@ -155,7 +155,7 @@ input.form-control,
   /* display: flex;
     justify-content: center;
     align-items: center; */
-  background: green !important;
+  /* background: green !important; */
   height: 100vh;
   width: 130px;
 
@@ -166,7 +166,7 @@ input.form-control,
     align-items: center;
     height: 80%;
     width: 80%;
-    background-color: blue;
+/*     background-color: blue; */
   }
 }
 
@@ -178,7 +178,7 @@ input.form-control,
 
 .starttitle {
   color: wheat;
-  font-size: 2.9vw;
+  font-size: 2.2vw;
 }
 
 .starttxt {
@@ -232,7 +232,7 @@ a {
 
 @media screen and (max-width: 1600px) {
   .container-fluid {
-    background-color: red;
+   /*  background-color: red; */
   }
 
   input::placeholder{
@@ -256,7 +256,7 @@ a {
     /* display: flex;
       justify-content: center;
       align-items: center; */
-    background: green !important;
+   /*  background: green !important; */
     height: 100vh;
     width: 130px !important;
 
@@ -267,7 +267,7 @@ a {
       align-items: center;
       height: 80%;
       width: 80% !important;
-      background-color: blue;
+     /*  background-color: blue; */
     }
   }
 
@@ -304,7 +304,7 @@ a {
 /* desktop styles*/
 @media screen and (max-width: 1200px) {
   .container-fluid {
-    background-color: blue;
+    /* background-color: blue; */
   }
 
   input::placeholder{
@@ -328,7 +328,7 @@ a {
     /* display: flex;
       justify-content: center;
       align-items: center; */
-    background: green !important;
+ /*    background: green !important; */
     height: 100vh;
     width: 130px !important;
 
@@ -339,7 +339,7 @@ a {
       align-items: center;
       height: 80%;
       width: 80% !important;
-      background-color: blue;
+/*       background-color: blue; */
     }
   }
 
@@ -380,7 +380,7 @@ a {
   /* -------------------------------------------------------------------------- */
 
   .container-fluid {
-    background-color: grey;
+  /*   background-color: grey; */
   }
 
   input.form-control,
@@ -398,7 +398,7 @@ a {
     /* display: flex;
       justify-content: center;
       align-items: center; */
-    background: green !important;
+  /*   background: green !important; */
     height: 100vh;
     width: 150px !important;
 
@@ -409,7 +409,7 @@ a {
       align-items: center;
       height: 80%;
       width: 80% !important;
-      background-color: blue;
+/*       background-color: blue; */
     }
   }
 
@@ -450,7 +450,7 @@ a {
 
 @media screen and (max-width: 767px) {
   .container-fluid {
-    background-color: green;
+  /*   background-color: green; */
   }
 
   input.form-control,
@@ -468,7 +468,7 @@ a {
     /* display: flex;
       justify-content: center;
       align-items: center; */
-    background: green !important;
+/*     background: green !important; */
     height: 100vh;
     width: 150px !important;
 
@@ -479,7 +479,7 @@ a {
       align-items: center;
       height: 80%;
       width: 80% !important;
-      background-color: blue;
+     /*  background-color: blue; */
     }
   }
 
@@ -520,7 +520,7 @@ a {
 
 @media screen and (max-width: 620px) {
   .container-fluid {
-    background-color: turquoise;
+   /*  background-color: turquoise; */
   }
 
   .card {
@@ -542,7 +542,7 @@ a {
     /* display: flex;
       justify-content: center;
       align-items: center; */
-    background: green !important;
+    /* background: green !important; */
     height: 100vh;
     width: 150px !important;
 
@@ -553,7 +553,7 @@ a {
       align-items: center;
       height: 80%;
       width: 80% !important;
-      background-color: blue;
+      /* background-color: blue; */
 
       .starttitle {
         color: wheat;
@@ -589,7 +589,7 @@ a {
 
 @media screen and (min-width: 320px) and (max-width: 575px) {
   .container-fluid {
-    background-color: yellow;
+    /* background-color: yellow; */
   }
 
   .container {
@@ -620,14 +620,14 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: purple;
+ /*  background: purple; */
   height: 80vh;
   width: 60% !important;
 
   .container-sidebar {
     height: 80%;
     width: 100%;
-    background-color: blue;
+    /* background-color: blue; */
   }
 }
 

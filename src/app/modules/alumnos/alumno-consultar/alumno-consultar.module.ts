@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { AlumnoConsultarRoutingModule } from './componentes/alumno-consultar-routing.module';
+import { AlumnoConsultarRoutingModule } from './alumno-consultar-routing.module';
+import { AlumnoConsultarComponent } from './componentes/alumno-consultar.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
-  declarations: [],
+  declarations: [AlumnoConsultarComponent],
   imports: [
     CommonModule,
-    AlumnoConsultarRoutingModule
+    AlumnoConsultarRoutingModule,
+    SharedModule
   ]
 })
 export class AlumnoConsultarModule { }

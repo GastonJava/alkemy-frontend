@@ -121,10 +121,30 @@ export class FormularioComponent implements OnInit {
             }, 5000);
 
           } else if (this.rolNombre.value == "Alumno") {
+            
+            Swal.fire({
+              title: `<span style="color:#75BAFF">Bienvenido: Alumno: ${this.Email.value} <p style = "color:green;">Logueado con exito</p> </span>`,
+              text: "Redirigiendo...",
+              showClass: {
+                popup: "animate__animated animate__fadeInDown",
+              },
+              hideClass: {
+                popup: "animate__animated animate__fadeOutUp",
+              },
+              toast: true,
+              timer: 3000,
+              showConfirmButton: false,
+              showCancelButton: false,
+              position: 'top',
+              timerProgressBar: true,
+
+            });
 
 
             setTimeout(() => {
-              this.router.navigate(["/registraralumno"]);
+              this.router.navigate(["/alumnoprincipal"]);
+              /* this.router.navigate(["/consultaralumno"]); */
+              /* this.router.navigate(["/registraralumno"]); */
             }, 5000);
           }
         }

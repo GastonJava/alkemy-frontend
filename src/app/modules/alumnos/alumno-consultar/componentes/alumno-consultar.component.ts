@@ -6,8 +6,8 @@ import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-alumno-consultar',
-  templateUrl: './componentes/alumno-consultar.component.html',
-  styleUrls: ['./componentes/alumno-consultar.component.scss']
+  templateUrl: './alumno-consultar.component.html',
+  styleUrls: ['./alumno-consultar.component.scss']
 })
 export class AlumnoConsultarComponent implements OnInit {
 

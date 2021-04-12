@@ -3,6 +3,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { TodoserviceService } from "src/app/shared/services/todoservice.service";
+import Swal from "sweetalert2";
 import { IMateria } from "../Interface Materia/IMateria";
 
 
@@ -18,10 +19,14 @@ export class RegistrarMateriaComponent implements OnInit {
   docentedatos: any = [];
   materiadatos: IMateria;
 
+  nombreuser: any;
+
   constructor(private srvmateria: TodoserviceService, private route: Router) {}
 
   ngOnInit() {
     this.FormDataGroup();
+    var payload = JSON.parse(window.atob(localStorage.getItem('jwt').split('.')[1]));
+    this.nombreuser = payload.usernombre;
   }
 
   FormDataGroup() {
@@ -58,6 +63,10 @@ export class RegistrarMateriaComponent implements OnInit {
     return this.inputs.get("Apellido_d");
   }
 
+  resetForm(): void{
+    this.inputs.reset();
+  }
+
   obtenerdocente() {
     this.srvmateria.buscarDocente(this.Dni.value).subscribe((data) => {
       this.docentedatos = data;
@@ -74,9 +83,27 @@ export class RegistrarMateriaComponent implements OnInit {
       (response) => {
 
         const token = (<any>response).token;
-        localStorage.setItem("jwt", token);
-        this.iscreated = false;
-        this.route.navigate(["/registraralumno"]);
+        /* localStorage.setItem("jwt", token); */
+       
+        /* this.route.navigate(["/adminprincipal/registrarmateria"]); */
+
+        Swal.fire({
+          position: 'top-left',
+          icon: 'success',
+          title: 'Se agrego Materia Correctamente',
+          showConfirmButton: false,
+          timer: 1500
+        })
+
+        setTimeout(() => {
+          this.resetForm();
+         
+        }, 2000);
+
+        
+
+
+
       },
       (error: HttpErrorResponse) => {
         this.iscreated = true;

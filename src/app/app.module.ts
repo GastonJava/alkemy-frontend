@@ -3,25 +3,33 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './core/paginas/footer/footer.component';
-/* import { AlumnoRegistrarComponent } from './alumnos/alumno-registrar/alumno-registrar.component'; */
+
 import { HttpClientModule } from '@angular/common/http';
 import { LoaderComponent } from './shared/loader/loader.component';
-import { RouterModule } from '@angular/router';
-import { JwtModule } from '@auth0/angular-jwt';
-import { AuthGuardService } from './modules/formulario/services/AuthGuard.service';
+
+import { NavbarComponent } from './core/paginas/navbar/navbar.component';
+import { SidebarComponent } from './core/paginas/footer/sidebar/sidebar.component';
+import { AdminfooterComponent } from './core/paginas/footer/adminfooter/adminfooter.component';
+import { FooterComponent } from './core/paginas/footer/footer.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoaderComponent,
-
+    NavbarComponent,
+    FooterComponent,
+    AdminfooterComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

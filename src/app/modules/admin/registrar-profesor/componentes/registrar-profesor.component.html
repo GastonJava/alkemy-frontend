@@ -100,8 +100,16 @@
                       <div class="input-group-text">
                         <i class="fa fa-toggle-on" aria-hidden="true"></i>
                       </div>
+                      
+                      <select class="texto" name="pickup_place" id="pickup_place" formControlName="Activo_docente"> 
+                        <option class="optiontxt" value="" selected="selected" disabled><p class="">Seleccionar estado:</p></option>
+                        <option *ngFor="let estado of estados" [ngValue]="estado">{{estado}}</option>             
+                      </select>
 
-                      <input name="activo" placeholder="1:activo | 2:no activo" type="number" class="form-control" formControlName="Activo_docente" />
+
+
+
+                      <!-- <input name="activo" placeholder="1 : activo | 0 : no activo" type="number" class="form-control" formControlName="Activo_docente" /> -->
                     </div>
 
 
@@ -138,37 +146,46 @@
                   >
                     Enviar
                   </button>
+
+                  
                 </div>
               </div>
             </form>
+
+            <!-- <pre>{{ findactivo | JSON }}</pre> -->
+
+
           </div>
         </div>
       </div>
       <!--  </div> -->
     </div>
 
-    <!--  <div class="sidebar-container">
-     
+     <div class="sidebar-container">
+
       <div class="container-sidebar">
-    
+        
+        <!-- <ng-container *ngFor="let docente of docentes"> -->
+
         <div class="nombre-alumno">
-          <p class="starttitle">PONCE GASTON</p>
+          <p class="starttitle">Admin: {{ nombrepayload }}</p>
         </div>
-        <p class="starttxt">Condicion: Regular</p>
-        <p class="starttxt">Total Materias: 10</p>
-        <p class="starttxt">Aprobadas: 3</p>
-        <p class="starttxt">Proximo examen: <br/>03/05/2021</p>
-  
+        <p class="starttxt">Cantidad de profesores: {{ total }}</p> <!-- {{docentes.length}} -->
+        <p class="starttxt">Profesores Activos: {{ findactivo }}</p>  <!-- {{contador}} -->
+        <p class="starttxt">Profesores no activos: {{ noactivos }}</p>
+       <!--  <p class="starttxt">Proximo examen: <br/>03/05/2021</p> -->
+      <!-- </ng-container> -->
+
         <div class="links-wrapper">
           <li id="txt">
-            <a routerLink="/consultaralumno" routerLinkActive="activado"
-              >Consultar materia
+            <a routerLink="/adminprincipal/regprofesor" routerLinkActive="activado"
+              >Registrar Profesor
             </a>
           </li>
         
           <li id="txt">
-            <a routerLink="/registraralumno" routerLinkActive="activado"
-              >Registrar materia</a
+            <a routerLink="/adminprincipal/regmateria" routerLinkActive="activado"
+              >Registrar Materia</a
             >
           </li>
         
@@ -179,11 +196,13 @@
           </li>
         
         </div>
-  
-      </div>
+        
       
+
+      </div>
+
      
-    </div> -->
+    </div>
   </div>
 </div>
 
